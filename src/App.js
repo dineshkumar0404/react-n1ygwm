@@ -167,9 +167,14 @@ class App extends Component {
                         : ''}
                     </td>
                     <td>
-                      {this.state.selecteduser
-                        ? this.state.selecteduser.file
-                        : ''}
+                      <img
+                        src={
+                          this.state.selecteduser
+                            ? this.state.selecteduser.file
+                            : ''
+                        }
+                        style={{ height: '75px' }}
+                      />
                     </td>
                   </tr>
                 </tbody>
