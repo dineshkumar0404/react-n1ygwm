@@ -117,7 +117,7 @@ class App extends Component {
         </Modal>
 
         <Modal isOpen={this.state.detailuser}>
-          <div style={{ backgroundColor: 'white', width: '900px' }}>
+          <div style={{ backgroundColor: 'white', width: '950px' }}>
             <ModalBody>
               <table
                 className="table table-striped mr-1"

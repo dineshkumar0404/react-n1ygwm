@@ -18,7 +18,7 @@ class RegisterForm extends React.Component {
 
   handleChange(e) {
     let fields = this.state.fields;
-   
+
     fields[e.target.name] = e.target.value;
     this.setState({
       fields,
@@ -38,11 +38,7 @@ class RegisterForm extends React.Component {
       fields['file'] = '';
       this.setState({ fields: fields });
 
-   
-
       this.props.saveEmpDetail(this.state.fields);
-
-     
     }
   }
 
@@ -212,9 +208,7 @@ class RegisterForm extends React.Component {
             <input
               type="file"
               name="file"
-              defaultValue={
-                this.props.data ? this.props.data.file : this.state.fields.file
-              }
+              defaultValue={this.props.data ? '' : this.state.fields.file}
               onChange={this.handleChange}
             />
             <div className="errorMsg">{this.state.errors.file}</div>
