@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "employee_name": "TigerNixon",
+    "employee_salary": 320800,
+    "employee_age": 41,
+    "email": "tiger@gmail.com",
+    "designation": "Developer",
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+  },
+  {
+    "id": 2,
+    "employee_name": "GarrettWinters",
+    "employee_salary": 170750,
+    "employee_age": 53,
+    "email": "garrett@gmail.com",
+    "designation": "Tester",
+    "file": "https://patterns.dev/img/reactjs/react-logo@3x.svg"
+  },
+  {
+    "id": 3,
+    "employee_name": "AshtonCox",
+    "employee_salary": 86000,
+    "employee_age": 56,
+    "email": "ashton@gmail.com",
+    "designation": "Analyst",
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+  },
+  {
+    "id": 4,
+    "employee_name": "CedricKelly",
+    "employee_salary": 433060,
+    "employee_age": 22,
+    "email": "cedric@gmail.com",
+    "designation": "Dataengineer",
+    "file": "https://patterns.dev/img/reactjs/react-logo@3x.svg"
+  },
+  {
+    "id": 5,
+    "employee_name": "AiriSatou",
+    "employee_salary": 162700,
+    "employee_age": 33,
+    "email": "airi@gmail.com",
+    "designation": "Software",
+    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+  }
+]
