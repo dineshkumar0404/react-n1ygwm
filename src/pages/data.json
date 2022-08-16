@@ -6,7 +6,7 @@
     "employee_age": 41,
     "email": "tiger@gmail.com",
     "designation": "Developer",
-    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+    "file": "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "employee_age": 53,
     "email": "garrett@gmail.com",
     "designation": "Tester",
-    "file": "https://patterns.dev/img/reactjs/react-logo@3x.svg"
+    "file": "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "employee_age": 56,
     "email": "ashton@gmail.com",
     "designation": "Analyst",
-    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+    "file": "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "employee_age": 22,
     "email": "cedric@gmail.com",
     "designation": "Dataengineer",
-    "file": "https://patterns.dev/img/reactjs/react-logo@3x.svg"
+    "file": "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
   },
   {
     "id": 5,
@@ -42,6 +42,6 @@
     "employee_age": 33,
     "email": "airi@gmail.com",
     "designation": "Software",
-    "file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+    "file": "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
   }
 ]
