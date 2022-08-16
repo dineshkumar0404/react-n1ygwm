@@ -11,9 +11,8 @@ class App extends Component {
     this.state = {
       users: data,
       selecteduser: null,
-      detailuser: null,
+      detailuser: false,
       showModel: false,
-      loading: true,
     };
   }
   passEmployee(e) {
@@ -29,7 +28,7 @@ class App extends Component {
   DeleteRow = (index, name) => {
     this.state.users.splice(index, 1);
     this.setState({ users: this.state.users });
-    // console.log(this.state.users.employee_name)
+
     alert('Do you want to delete EmployeeName : ' + name);
   };
 
@@ -54,7 +53,7 @@ class App extends Component {
           <td>{users.email}</td>
           <td>{users.designation}</td>
           <td>
-            <img src={users.file} style={{ height: '75px' }} />
+            <img src={users.file} style={{ height: '50px' }} alt="logo" />
           </td>
 
           <td>
@@ -68,7 +67,7 @@ class App extends Component {
             </button>
             <button
               className="btn btn-info m-1"
-              onClick={() => this.Update(users)}
+              onClick={() => this.Update(users, index)}
             >
               Update
             </button>
@@ -117,12 +116,9 @@ class App extends Component {
         </Modal>
 
         <Modal isOpen={this.state.detailuser}>
-          <div style={{ backgroundColor: 'white', width: '950px' }}>
+          {/* <div style={{ backgroundColor: 'white', width: '900px' }}>
             <ModalBody>
-              <table
-                className="table table-striped mr-1"
-                style={{ textAlign: 'center', width: '100px' }}
-              >
+              <table className="table table-striped "style={{ textAlign: 'center', width: '100px' }}>
                 <thead>
                   <tr>
                     <th>EmployeeId</th>
@@ -137,62 +133,181 @@ class App extends Component {
                 <tbody>
                   <tr>
                     <td>
-                      {this.state.selecteduser
-                        ? this.state.selecteduser.id
-                        : ''}
+                      {this.state.selecteduser ? this.state.selecteduser.id : ''}
                     </td>
                     <td>
-                      {this.state.selecteduser
-                        ? this.state.selecteduser.employee_name
-                        : ''}
+                      {this.state.selecteduser ? this.state.selecteduser.employee_name : ''}
                     </td>
                     <td>
-                      {this.state.selecteduser
-                        ? this.state.selecteduser.employee_salary
-                        : ''}
+                      {this.state.selecteduser ? this.state.selecteduser.employee_salary : ''}
                     </td>
                     <td>
-                      {this.state.selecteduser
-                        ? this.state.selecteduser.employee_age
-                        : ''}
+                      {this.state.selecteduser ? this.state.selecteduser.employee_age : ''}
                     </td>
                     <td>
-                      {this.state.selecteduser
-                        ? this.state.selecteduser.email
-                        : ''}
+                      {this.state.selecteduser ? this.state.selecteduser.email : ''}
                     </td>
                     <td>
-                      {this.state.selecteduser
-                        ? this.state.selecteduser.designation
-                        : ''}
+                      {this.state.selecteduser ? this.state.selecteduser.designation : ''}
                     </td>
                     <td>
-                      <img
-                        src={
-                          this.state.selecteduser
-                            ? this.state.selecteduser.file
-                            : ''
-                        }
-                        style={{ height: '75px' }}
+                      <img  src={this.state.selecteduser ? this.state.selecteduser.file : ''} alt="logo"style={{ height: '50px' }}
                       />
                     </td>
                   </tr>
                 </tbody>
               </table>
 
-              <div>
+              <div> 
                 <button
-                  type="button"
-                  class="btn btn-danger"
-                  onClick={() =>
-                    this.setState({ detailuser: !this.state.detailuser })
-                  }
-                >
+                  type="button" className="btn btn-danger" onClick={() => this.setState({ detailuser: !this.state.detailuser })}>
                   Close
                 </button>
               </div>
             </ModalBody>
-          </div>
+            </div>*/}
+
+          <h3 style={{ marginTop: '25px' }}>Employee Details</h3>
+
+          <ModalBody>
+            <div className="container">
+              <div
+                className="row mt-1"
+                style={{
+                  padding: '0px 0px 0px 0px',
+                  height: '50px',
+                  marginTop: '35px',
+                }}
+              >
+                <div className="col-md-4">
+                  <label>EmployeeID</label>
+                </div>
+                <div className="col-md-2">
+                  <label>-</label>
+                </div>
+                <div className="col-md-6">
+                  {this.state.selecteduser ? this.state.selecteduser.id : ''}
+                </div>
+              </div>
+
+              <div
+                className="row mt-1"
+                style={{
+                  padding: '0px 0px 0px 0px',
+                  height: '50px',
+                  marginTop: '35px',
+                }}
+              >
+                <div className="col-md-4">
+                  <label>EmployeeName</label>
+                </div>
+                <div className="col-md-2">
+                  <label>-</label>
+                </div>
+                <div className="col-md-6">
+                  {this.state.selecteduser
+                    ? this.state.selecteduser.employee_name
+                    : ''}
+                </div>
+              </div>
+
+              <div
+                className="row mt-1"
+                style={{
+                  padding: '0px 0px 0px 0px',
+                  height: '50px',
+                  marginTop: '35px',
+                }}
+              >
+                <div className="col-md-4">
+                  <label>EmployeeSalary</label>
+                </div>
+                <div className="col-md-2">
+                  <label>-</label>
+                </div>
+                <div className="col-md-6">
+                  {this.state.selecteduser
+                    ? this.state.selecteduser.employee_salary
+                    : ''}
+                </div>
+              </div>
+
+              <div
+                className="row mt-1"
+                style={{
+                  padding: '0px 0px 0px 0px',
+                  height: '50px',
+                  marginTop: '35px',
+                }}
+              >
+                <div className="col-md-4">
+                  <label>EmployeeAge</label>
+                </div>
+                <div className="col-md-2">
+                  <label>-</label>
+                </div>
+                <div className="col-md-6">
+                  {this.state.selecteduser
+                    ? this.state.selecteduser.employee_age
+                    : ''}
+                </div>
+              </div>
+
+              <div
+                className="row mt-1"
+                style={{
+                  padding: '0px 0px 0px 0px',
+                  height: '50px',
+                  marginTop: '35px',
+                }}
+              >
+                <div className="col-md-4">
+                  <label>Email</label>
+                </div>
+                <div className="col-md-2">
+                  <label>-</label>
+                </div>
+                <div className="col-md-6">
+                  {this.state.selecteduser ? this.state.selecteduser.email : ''}
+                </div>
+              </div>
+
+              <div
+                className="row mt-1"
+                style={{
+                  padding: '0px 0px 0px 0px',
+                  height: '50px',
+                  marginTop: '35px',
+                }}
+              >
+                <div className="col-md-4">
+                  <label>Designation</label>
+                </div>
+                <div className="col-md-2">
+                  <label>-</label>
+                </div>
+                <div className="col-md-6">
+                  {this.state.selecteduser
+                    ? this.state.selecteduser.designation
+                    : ''}
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col text-center">
+                  <button
+                    type="button"
+                    className="btn btn-danger text-center"
+                    onClick={() =>
+                      this.setState({ detailuser: !this.state.detailuser })
+                    }
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </ModalBody>
         </Modal>
       </div>
     );

@@ -30,6 +30,7 @@ function Addmodel(args) {
             color="secondary"
             onClick={toggle}
           >
+            {' '}
             X
           </button>
 
