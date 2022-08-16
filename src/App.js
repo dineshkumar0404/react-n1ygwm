@@ -52,9 +52,7 @@ class App extends Component {
           <td>{users.employee_age}</td>
           <td>{users.email}</td>
           <td>{users.designation}</td>
-          <td>
-            <img src={users.file} style={{ height: '50px' }} alt="logo" />
-          </td>
+          {/* <td><img src={users.file} style={{ height: "50px" }} alt="logo" /></td> */}
 
           <td>
             <button
@@ -96,7 +94,7 @@ class App extends Component {
               <th>EmployeeAge</th>
               <th>Email ID</th>
               <th>Designation</th>
-              <th>ProfileImage</th>
+              {/* <th>ProfileImage</th> */}
               <th>Action</th>
             </tr>
           </thead>
@@ -171,6 +169,36 @@ class App extends Component {
 
           <ModalBody>
             <div className="container">
+              <div
+                className="row mt-1"
+                style={{
+                  padding: '0px 0px 0px 0px',
+                  height: '150px',
+                  marginTop: '35px',
+                }}
+              >
+                <div className="col-md-4"></div>
+                <div
+                  className="col-md-4"
+                  style={{
+                    border: 'solid 2px',
+                    borderRadius: '100px',
+                    width: '150px',
+                  }}
+                >
+                  <img
+                    src={
+                      this.state.selecteduser
+                        ? this.state.selecteduser.file
+                        : ''
+                    }
+                    alt="logo"
+                    style={{ height: '120px' }}
+                  ></img>
+                </div>
+                <div className="col-md-4"></div>
+              </div>
+
               <div
                 className="row mt-1"
                 style={{
