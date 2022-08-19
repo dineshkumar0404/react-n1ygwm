@@ -171,7 +171,7 @@ class RegisterForm extends React.Component {
                   ? this.props.data.employee_name
                   : this.state.fields.employee_name
               }
-              onChange={(e) => this.handleChange(e).bind(this)}
+              onChange={this.handleChange}
             />
             <div className="errorMsg">{this.state.errors.employee_name}</div>
 
